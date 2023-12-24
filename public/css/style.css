@@ -1,0 +1,165 @@
+img{
+    width: 400px;height: 300px;
+    background-color: rgb(224,224,224);
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*  */
+.show {
+    display: block;
+  }
+  .filterDiv {
+    display: none; /* Hidden by default */
+  }
+
+/*  */
+
+/* header */
+.header{
+    z-index: 999;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(153, 168, 168);
+    width: 100%;height: auto;
+    text-decoration: none;
+    position: fixed;
+}
+.header a{text-decoration: none;}
+.header div,
+.header button{
+    margin: 0;
+    width: 140px;height: 60px;
+    background-color: rgba(255, 0, 0, 0.562);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 800;font-size: 20px;
+    transition: .5s all;
+    border: none;
+}
+.header div:hover,
+.header button:hover{
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.226);
+    color: #000000;
+}
+.header .search{
+    padding: 0;margin: 0;
+    background: none;
+    width: 300px;
+}
+.header .search input[type=text] {
+    width: 100%;height: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+  }
+  /* div add */
+.el-add{
+    margin-top: 40px;
+    width: auto;height: 600px;
+    background-color: rgb(231, 235, 235);
+    transform: translateX(-96%);
+    transition: 1s;
+    opacity: 0;
+    z-index: 90;
+    position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.el-add #up-add{
+    width: 100%;height: 40%;
+    display: flex;
+    justify-content: center;
+}
+.el-add #up-add .image-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%}
+.el-add #up-add .image-container img{
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 200px;
+    width: 55%;
+}
+.el-add #up-add .image-container label{
+    display: flex;
+    justify-content: center ;
+    width: 50%;height: 20px;
+    margin-top: 10px;padding: 10px 0 10px 0;
+    background-color: aqua;
+}
+
+input[type="file"]{
+    display: none;
+}
+
+.el-add #mid-add{
+    width: 100%;height: 50%;
+}
+.mid-add-info{
+    padding: 8px;
+}
+.mad-title{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;letter-spacing: 4px;
+}
+.mad-options{
+    display: flex;
+}
+.low-btn{width: 100%;height: 100%;}
+.low-btn button{
+    width: 100%;height: 100%;
+}
+.el-add #low-add{
+    width: 100%;height: 15%;
+    background-color: rgb(94, 116, 86);
+}
+.el-add-hide{
+    transform: translateX(20%) translateY(10%) scale(1.1);
+    opacity: 1;
+}
+.elChoice{
+    margin-top: 70px;
+    width: 450px;height: 400px;
+    background-color: rgb(231, 235, 235);
+    transform: translateX(396%);
+    transition: 1.5s;
+    opacity: 0;
+    z-index: 1;
+    position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;;
+}
+.elChoice-hide{
+    transform: translateX(200%) translateY(10%) scale(1.1);
+    opacity: 1;
+}
+.elChoice-title{
+    display: flex;
+    justify-content: center;
+}
+.elChoice-options .op{
+    display: flex;
+    justify-content:space-between;
+    margin: 0 30px 10px 30px;
+}
+.submit-choice{
+    width: 100%;height: 20%;
+    margin-top: 30px;
+}
+.submit-choice button{
+    width: 100%;height: 100%;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="el-add">
+        <div id="up-add">
+            <div class="image-container">
+                <img id="chosen-image" src="https://motor.ru/thumb/1500x0/filters:quality(75):no_upscale()/imgs/2020/09/07/14/4099186/52d8f45d1ae944564ab28538f5a79af4894c5106.jpg" alt="Nope">
+                <input type="file" id="upload-button" accept="images/*">
+                <label for="upload-button">
+                    <i class="fas fa-upload"></i> &nbsp; Choose A Photo
+                </label>
+            </div>
+        
+        </div>
+        <div id="mid-add">
+            <div class="mid-add-info">
+                <div class="mad-title">
+                    <p>Information for the new one</p>
+                </div>
+                <div class="mad-options">
+                    <div class="m1">
+                        <div class="op ves">
+                            <p>Вес(кг)</p>
+                            <input type="text" id="Cves">
+                        </div>
+                        <div class="op nomer">
+                            <p>Номер знака</p>
+                            <input type="text" placeholder="1234 МН" id="Cnum">
+                        </div>
+                        <div class="op okras">
+                            <p>Окрас</p>
+                            <input type="text"id="Cokras">
+                        </div>
+                    </div>
+                    <div class="m2">
+                        <div class="op tip">
+                            <p>Тип двигателя</p>
+                            <input id="Ctip" type="text" list="options">
+                                <datalist id="options">
+                                    <option value="бензиновый"></option>
+                                    <option value="дизельный"></option>
+                                    <option value="газовый"></option>
+                                    <option value="электрический "></option>
+                                    <option value=" гибридная установка"></option>
+                                </datalist>
+                        </div>
+                        <div class="op narushil">
+                            <p>Кол-во нарушений</p>
+                            <input type="text" id="Cnarush">
+                        </div>
+                        <div class="op neoplata" >
+                            <p>Неоплаченно</p>
+                            <input type="text"id="Cneoplat">
+                        </div>
+                    </div>
+                    <div class="m3">
+                        <div class="op god">
+                            <p>Год выпуска</p>
+                            <input type="text" id="Cgod">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="low-add">
+            <div class="low-btn">
+                <button>Add to Base</button>
+            </div>
+        </div>
+    </div>
+    <div class="elChoice">
+        <div class="elChoice-title">
+            <h1>Критерии</h1>
+        </div>
+        <div class="elChoice-options">
+            <div class="op">
+                <label for="">Вес (до)+(в кг)</label>
+                <input type="text">
+            </div>
+            <div class="op">
+                <label for="">Нормерной Знак</label>
+                <input type="text" placeholder="1234 MН">
+            </div>
+            <div class="op">
+                <label for="">Окрас</label>
+                <input type="text">
+            </div>
+            <div class="op">
+                <label for="">Год Выпуска</label>
+                <input type="text">
+            </div>
+            <div class="op">
+                <label for="">Тип Двигателя</label>
+                <input type="text" list="options">
+                <datalist id="options">
+                    <option value="бензиновый"></option>
+                    <option value="дизельный"></option>
+                    <option value="газовый"></option>
+                    <option value="электрический "></option>
+                    <option value=" гибридная установка"></option>
+                </datalist>
+            </div>
+            <div class="op">
+                <label for="">Кол-во Нарушений</label>
+                <input type="text">
+            </div>
+            <div class="op">
+                <label for="">Сумма-Неоплаченно</label>
+                <input type="text">
+            </div>
+        </div>
+        <div class="submit-choice">
+            <button>Submit</button>
+        </div>
+    </div>
+    <!--  -->
+            
+            <div class="nav">
+                <div class="header">
+                    <a href=""><div><span>Data Cars</span></div></a>
+                    <a href=""><div>All Cars</div></a>
+                    <a href=""><div><button class="btn2">Choice</button></div></a>
+                    <a href=""><div><button class="btn">Add New</button></div></a>
+                </div>
+            </div>
+    <div class="container mx-auto">
+        <h1 class="text-center text-3xl font-bold pt-24">Search</h1>
+    </div>
+
+    <form class="text-center py-4">
+        <input type="text" class="focus:outline-none bg-gray-200 text-gray-800 w-2/4 py-2 px-3 rounded-md" id="filterInput" placeholder="filter">
+        <ul>
+            <li><button class="border-2 px-8 py-1 bg-green-400 rounded-md btn" onclick="filterSelection('all')">All</button></li>
+            <li>||=||</li>
+            <li><button class="border-2 px-8 py-1 bg-green-400 rounded-md btn" onclick="filterSelection('max')">Max</button></li>
+            <li><button class="border-2 px-8 py-1 bg-green-400 rounded-md btn" onclick="filterSelection('min')">Min</button></li>
+            <li>||=||</li>
+            <li><button class="border-2 px-8 py-1 bg-green-400 rounded-md btn" onclick="filterSelection('Honda')" >Honda</button></li>
+            <li><button class="border-2 px-8 py-1 bg-green-400 rounded-md btn" onclick="filterSelection('Hord')">Ford</button></li>
+        </ul>
+    </form>
+
+    <!-- cars -->
+    <div class="cars grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+    </div>
+
+
+    <script src="./js/api.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
